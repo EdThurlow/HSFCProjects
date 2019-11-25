@@ -1,0 +1,228 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CoachProject2
+{
+    class Address
+    {
+        //address variables
+        private String houseName = "";
+        private int houseNumber = 0;
+        private String streetName = "";
+        private String cityName = "";
+        private String countryName = "";
+
+        //address methods
+
+        //Setter and Getter methods:
+        public void SetHouseName(string theHouseName)
+        {
+            houseName = theHouseName; //Store the value.
+        }
+
+        public string GetName()
+        {
+            return houseName; //Retrieve the stored value.
+        }
+
+
+        public void SetHouseNumber(int theHouseNumber)
+        {
+            houseNumber = theHouseNumber;
+        }
+
+        public int GetNumber()
+        {
+            return houseNumber;
+        }
+
+
+        public void SetStreetName(string theStreetName)
+        {
+            streetName = theStreetName;
+        }
+
+        public string GetSteetName()
+        {
+            return streetName;
+        }
+
+
+        public void SetCityName(string theCityName)
+        {
+            cityName = theCityName;
+        }
+
+        public string GetCityName()
+        {
+            return cityName;
+        }
+
+        public void setCountryName(string theCountryName)
+        {
+            cityName = theCountryName;
+        }
+
+        public string GetCountryName()
+        {
+            return countryName;
+        }
+
+        public override string ToString()
+        {
+            return houseName + houseNumber + streetName + cityName + countryName;
+        }
+
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CoachProject2
+{
+    class Coach
+    {
+        Person[] contents = new Person[52];
+        int nextFreeSeat = 0; // nextFreeSeat is another way
+        // of saying free location/space/box
+         
+
+        public bool AddPerson(Person thePerson)
+        {
+            if (nextFreeSeat > 51)
+                return false; // when returning 'false' that statement goes (its not relevant anymore),
+            // and so you can now start the next statement
+
+            contents[nextFreeSeat] = thePerson;
+            nextFreeSeat++;
+            return true;
+
+        }
+
+        public int GetSeatByName(String Passenger)
+        {
+            //if not found return -1, this means there is an error or something
+            for (int i = 0; i < nextFreeSeat; i++)
+            {
+                if (Passenger == contents[i].GetName())
+                {
+                    return i;
+                }
+
+
+                else
+
+                    return -1;
+            }
+        }   
+
+        public bool RemovePersonByName(Person thePerson)
+            //note: this remove the 1st person found
+            //with the name == theName
+        {
+            int location = GetSeatByName(theName);
+        }
+        public int GetNumofPassengers()
+        {
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CoachProject2
+{
+    class Person
+    {
+        //person variables
+        private String name = "";
+        private int age = 0;
+        private Address livesat;
+        public Person(String aName)
+        {
+            name = aName;
+        }
+        public Person(int anAge)
+        {
+            age = anAge;
+        }
+
+
+        //person methods
+
+        //setter and getter methods:
+        public void setName(string theName)
+        {
+            name = theName; //store the value.
+        }
+
+        public String getName()
+        {
+            return name; //Retrieve the stored value.
+
+        }
+
+        public void setAge(int theAge)
+        {
+            age = theAge;
+        }
+
+        public int getAge()
+        {
+            return age;
+        }
+
+        public void setLivesat(Address lives)
+        {
+            livesat = lives;
+        }
+
+        public Address getlivesat()
+        {
+            return livesat;
+        }
+
+        public override string ToString()
+        {
+            return name + age + livesat;
+        }
+
+
+
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+
+namespace CoachProject2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Coach myCoach = new Coach();
+
+            for (int i = 0; i < 5; i++)
+            {
+                Person p = newPerson();
+                Console.WriteLine("Enter Name");
+                p.SetName(Console.ReadLine());
+
+                if (myCoach.AddPerson(p) == true)
+                    Console.WriteLine("You have a seat");
+                else
+                    Console.WriteLine("Get out of my coach");
+            }
+        }
+    }
+}

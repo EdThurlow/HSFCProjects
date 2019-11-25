@@ -1,0 +1,187 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace PersonProject
+{
+    public class Address
+    {
+        //address variables
+        private String houseName = "";
+        private int houseNumber = 0;
+        private String streetName = "";
+        private String cityName = "";
+        private String countryName = "";
+
+        //address methods
+
+        //Setter and Getter methods:
+        public void SetHouseName(string theHouseName)
+        {
+            houseName = theHouseName; //Store the value.
+        }
+
+        public string GetName()
+        {
+            return houseName; //Retrieve the stored value.
+        }
+
+
+        public void SetHouseNumber(int theHouseNumber)
+        {
+            houseNumber = theHouseNumber;
+        }
+
+        public int GetNumber()
+        {
+            return houseNumber;
+        }
+
+
+        public void SetStreetName(string theStreetName)
+        {
+            streetName = theStreetName;
+        }
+
+        public string GetSteetName()
+        {
+            return streetName;
+        }
+
+
+        public void SetCityName(string theCityName)
+        {
+            cityName = theCityName;
+        }
+
+        public string GetCityName()
+        {
+            return cityName;
+        }
+
+        public void setCountryName(string theCountryName)
+        {
+            cityName = theCountryName;
+        }
+
+        public string GetCountryName()
+        {
+            return countryName;
+        }
+
+        public override string ToString()
+        {
+            return houseName + houseNumber + streetName + cityName + countryName;
+        }
+
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace PersonProject
+{
+    public class Person
+    {
+        //person variables
+        private String name = "";
+        private int age = 0;  
+        private Address livesat;
+        public Person (String aName)
+        {
+            name = aName;
+        }
+        public Person (int anAge)
+        {
+            age = anAge;
+        }
+        public Address (String aLivesat)
+        {
+            
+        }
+
+
+
+        //person methods
+
+        //setter and getter methods:
+        public void setName(string theName)
+        {
+            name = theName; //store the value.
+        }
+
+        public String getName()
+        {
+            return name; //Retrieve the stored value.
+
+        }
+
+        public void setAge(int theAge)
+        {
+            age = theAge;
+        }
+
+        public int getAge()
+        {
+            return age;
+        }
+
+        public void setLivesat(Address lives)
+        {
+            livesat = lives;
+        }
+
+        public Address getlivesat()
+        {
+            return livesat;
+        }
+
+        public override string ToString()
+        {
+            return name + age + livesat;
+        }
+
+
+
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+using System;
+
+namespace PersonProject
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+
+            Person p1;
+            p1 = new Person("Alfred");
+            Address a1;
+            a1 = new Address();
+
+
+
+
+
+            p1.setName("Seb");
+
+            p1.setAge(17);
+
+            p1.setLivesat(a1);
+
+
+
+
+
+
+        }
+    }
+}
+

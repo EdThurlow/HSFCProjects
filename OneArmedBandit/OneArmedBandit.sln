@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneArmedBandit", "OneArmedBandit\OneArmedBandit.csproj", "{56F22B1B-A9D4-43FD-AA63-57D669F6EE2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56F22B1B-A9D4-43FD-AA63-57D669F6EE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F22B1B-A9D4-43FD-AA63-57D669F6EE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F22B1B-A9D4-43FD-AA63-57D669F6EE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F22B1B-A9D4-43FD-AA63-57D669F6EE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF9F3F56-A979-4585-8936-E6F7FDE0420E}
+	EndGlobalSection
+EndGlobal
